@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center bg-gray-300">
-    <div class="flex flex-col bg-white shadow px-10 py-8 rounded-lg w-full max-w-md">
+    <div class="flex flex-col bg-white shadow px-10 py-8 rounded-lg w-full max-w-md" v-if="!isSent">
       <p class="text-base my-2">Enter your new password. After confirming, you will be asked to log in again.</p>
       <form>
           <div class="flex flex-col my-6">
@@ -15,9 +15,7 @@
                   </svg>
                 </span>
               </div>
-              <input id="password" type="password" name="password"
-                class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded border border-gray-400 w-full py-2"
-                placeholder="New password" />
+              <input id="password" type="password" name="password" class="base-input w-full pl-10" placeholder="New password" />
             </div>
             <div class="relative">
               <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
@@ -29,18 +27,20 @@
                   </svg>
                 </span>
               </div>
-              <input id="password" type="password" name="password"
-                class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded border border-gray-400 w-full py-2"
-                placeholder="Confirm new password" />
+              <input id="password" type="password" name="password" class="base-input w-full pl-10" placeholder="Confirm new password" />
             </div>
           </div>
 
-          <PrimaryButton title="Reset password" color="green" @click="onClick" type="button" class="w-full">
+          <PrimaryButton title="Reset password" color="teal-800" @click="onClick" type="button" class="w-full">
             <template v-slot:icon>
               <i class="fas fa-chevron-right text-white"></i>
             </template>
           </PrimaryButton>
         </form>
+    </div>
+    <div class="flex flex-col bg-white shadow px-10 py-8 rounded-lg w-full max-w-md" v-else>
+      <img src="/email-sent.svg" class="mb-4"/>
+      <p class="my-2">Check your <strong>{{email}}</strong> inbox for instructions from us on how to reset your password.</p>
     </div>
     <div class="my-2">
       <p class="text-sm">Nevermind! <nuxt-link to="/login" class="underline"> Take me back to login</nuxt-link></p>
@@ -50,6 +50,17 @@
 
 <script>
   export default {
-    layout: 'main'
+    layout: 'main',
+    data() {
+      return {
+        isSent: false,
+        password: null,
+      }
+    },
+    methods: {
+      resetPassword() {
+        this.isSent = true;
+      }
+    },
   }
 </script>

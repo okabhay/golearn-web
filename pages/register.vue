@@ -20,9 +20,7 @@
               <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
                 <i class="fas fa-user-circle fa-lg"></i>
               </div>
-              <input id="email" type="email" name="email"
-                class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded border border-gray-400 w-full py-2"
-                placeholder="User name" />
+              <input id="name" type="text" name="name" class="base-input w-full pl-10" placeholder="User name" />
             </div>
           </div>
           <div class="flex flex-col mb-2">
@@ -31,9 +29,7 @@
               <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
                 <i class="fas fa-at fa-lg"></i>
               </div>
-              <input id="email" type="email" name="email"
-                class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded border border-gray-400 w-full py-2"
-                placeholder="Email address" />
+              <input id="email" type="email" name="email" class="base-input w-full pl-10" placeholder="Email address" />
             </div>
           </div>
           <div class="flex flex-col mb-6">
@@ -42,13 +38,11 @@
               <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
                 <i class="fas fa-lock fa-lg"></i>
               </div>
-              <input id="password" type="password" name="password"
-                class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded border border-gray-400 w-full py-2"
-                placeholder="Password" />
+              <input id="password" type="password" name="password" class="base-input w-full pl-10" placeholder="Password" />
             </div>
           </div>
 
-          <PrimaryButton title="Create My Account" :uppercase="true" :color="'orange'" @click="onClick" type="button">
+          <PrimaryButton title="Create My Account" :uppercase="true" :color="'red-700'" @click="onClick" type="button">
             <template v-slot:icon>
               <i class="fas fa-chevron-right text-white"></i>
             </template>

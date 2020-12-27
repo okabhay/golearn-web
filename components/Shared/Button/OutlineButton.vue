@@ -1,5 +1,5 @@
 <template>
-  <button class="h-11 flex rounded items-center border-2 border-gray-300 justify-center overflow-hidden" @click="handleClick">
+  <button class="h-11 flex rounded items-center border-2 border-gray-300 justify-center overflow-hidden focus:outline-none" @click="handleClick">
     <span class="text-gray-800 text-sm py-3 px-4 font-sans tracking-wide font-bold" :class="{uppercase : uppercase}">
       {{title}}
     </span>

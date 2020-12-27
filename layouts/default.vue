@@ -3,10 +3,9 @@
     <MainHeader />
     <div class="demo">
       <div class="container mx-auto">
-        <hr style="margin: 50px 0px;border: 1px solid #e3e3e3;">
         <Nuxt />
       </div>
-      <sidebar-menu :menu="menu" :collapsed="collapsed" :theme="selectedTheme" :show-one-child="true" @toggle-collapse="onToggleCollapse" :hideToggle="true" @item-click="onItemClick">
+      <sidebar-menu :menu="menu" :collapsed="collapsed" :theme="selectedTheme" width="280px" :show-one-child="true" @toggle-collapse="onToggleCollapse" :hideToggle="true" @item-click="onItemClick">
         <template v-slot:header>
           <button class="h-16 flex items-center focus:outline-none bg-menuBlack hover:bg-black" :class="{'w-full': !collapsed, 'justify-end': !collapsed, 'justify-center': collapsed,}" @click="onToggleCollapse">
             <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" v-if="collapsed"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
@@ -143,8 +142,6 @@
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
-
   body,
   html {
     margin: 0;
@@ -152,7 +149,7 @@
   }
 
   #demo {
-    padding-left: 350px;
+    padding-left: 280px;
     transition: 0.3s ease;
   }
 
@@ -180,7 +177,6 @@
   }
 
   pre {
-    font-family: Consolas, monospace;
     color: #000;
     background: #fff;
     border-radius: 2px;

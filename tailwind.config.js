@@ -5,8 +5,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
+      brand: colors.teal[400],
       white: colors.white,
       green: colors.emerald,
+      teal: colors.teal,
       orange: colors.orange,
       gray: colors.coolGray,
       black: colors.black,
@@ -18,20 +20,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          '"Segoe UI"',
-          'Roboto',
           '"Inter"',
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Helvetica Neue"',
-          'Arial',
-          '"Noto Sans"',
-          'sans-serif',
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
+          'Roboto',
+          '"Segoe UI"',
         ],
       }
     },

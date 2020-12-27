@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center bg-gray-300">
-    <div class="flex flex-col bg-white shadow px-10 py-8 rounded-lg w-full max-w-md">
+    <div class="flex flex-col bg-white shadow px-10 py-8 rounded-lg w-full max-w-md" v-if="!isSent">
       <p class="text-base my-2">To reset the password enter the email you used to sign in.</p>
       <form>
           <div class="flex flex-col my-6">
@@ -13,18 +13,20 @@
                     d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                 </svg>
               </div>
-              <input id="email" type="email" name="email"
-                class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded border border-gray-400 w-full py-2"
-                placeholder="Email address" />
+              <input id="email" type="email" v-model="email" name="email" class="base-input w-full pl-10" placeholder="Email address" />
             </div>
           </div>
 
-          <PrimaryButton title="Get reset link" color="green" @click="onClick" type="button" class="w-full">
+          <PrimaryButton title="Get reset link" color="teal-800" @click="sendResetLink" type="button" class="w-full">
             <template v-slot:icon>
               <i class="fas fa-chevron-right text-white"></i>
             </template>
           </PrimaryButton>
         </form>
+    </div>
+    <div class="flex flex-col bg-white shadow px-10 py-8 rounded-lg w-full max-w-md" v-else>
+      <img src="/email-sent.svg" class="mb-4"/>
+      <p class="my-2">Check your <strong>{{email}}</strong> inbox for instructions from us on how to reset your password.</p>
     </div>
     <div class="my-2">
       <p class="text-sm">Nevermind! <nuxt-link to="/login" class="underline"> Take me back to login</nuxt-link></p>
@@ -34,6 +36,17 @@
 
 <script>
   export default {
-    layout: 'main'
+    layout: 'main',
+    data() {
+      return {
+        isSent: false,
+        email: null,
+      }
+    },
+    methods: {
+      sendResetLink() {
+        this.isSent = true;
+      }
+    },
   }
 </script>

@@ -28,6 +28,11 @@
       <FacebookButton />
       <GoogleButton />
       <TwitterButton />
+      <button
+            class="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-blue-700 rounded ripple  focus:outline-none"
+          >
+            Primary
+          </button>
     </div>
 
   </div>
@@ -38,7 +43,7 @@
     layout: 'main',
     methods:{
       onClick(){
-        this.$router.push('/admin/dashboard')
+        this.$router.push('/login')
       }
     }
   }

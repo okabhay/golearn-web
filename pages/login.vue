@@ -18,15 +18,12 @@
             <!-- <label for="email" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">E-Mail Address:</label> -->
             <div class="relative">
               <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
-                <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                   <path
                     d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                 </svg>
               </div>
-              <input id="email" type="email" name="email"
-                class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded border border-gray-400 w-full py-2"
-                placeholder="Email address" />
+              <input id="email" type="email" name="email" class="base-input w-full pl-10" placeholder="Email address" />
             </div>
           </div>
           <div class="flex flex-col mb-6">
@@ -41,13 +38,11 @@
                   </svg>
                 </span>
               </div>
-              <input id="password" type="password" name="password"
-                class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded border border-gray-400 w-full py-2"
-                placeholder="Password" />
+              <input id="password" type="password" name="password" class="base-input w-full pl-10" placeholder="Password" />
             </div>
           </div>
 
-          <PrimaryButton title="Log me in" :uppercase="true" color="green" @click="onClick" type="button" class="w-full">
+          <PrimaryButton title="Log me in" :uppercase="true" :isLoading="loading" color="teal-800" @click="onClick" type="button" class="w-full">
             <template v-slot:icon>
               <i class="fas fa-chevron-right text-white"></i>
             </template>
@@ -74,9 +69,18 @@
 <script>
   export default {
     layout: 'main',
+    data() {
+      return {
+        loading: false,
+      }
+    },
     methods:{
-      onClick(){
-        this.$router.push('/admin/dashboard')
+      async onClick(){
+        this.loading = true,
+        await setTimeout(() => {
+          this.loading = false;
+          this.$router.push('/admin/dashboard')
+        }, 5000);
       }
     }
   }
