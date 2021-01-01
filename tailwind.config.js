@@ -20,8 +20,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          '"Inter"',
           'Roboto',
+          '"Inter"',
           '"Segoe UI"',
         ],
       }

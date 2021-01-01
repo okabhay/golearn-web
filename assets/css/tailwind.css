@@ -4,9 +4,6 @@
 
 @layer base {
     .base-input {
-      @apply text-sm sm:text-base placeholder-gray-500 px-4 py-2 rounded border border-gray-400 bg-gray-100 focus:outline-none focus:ring-1 focus:ring-brand;
-    }
-    h2 {
-      @apply text-xl;
+      @apply text-black placeholder-gray-400 bg-white border-gray-300 focus:border-blue-500  block w-full px-3 py-2 transition duration-100 ease-in-out border rounded shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50;
     }
   }

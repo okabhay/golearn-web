@@ -2,7 +2,7 @@
   <div id="demo" :class="[{'collapsed' : collapsed}, {'onmobile' : isOnMobile}]">
     <MainHeader />
     <div class="demo">
-      <div class="container mx-auto">
+      <div>
         <Nuxt />
       </div>
       <sidebar-menu :menu="menu" :collapsed="collapsed" :theme="selectedTheme" width="280px" :show-one-child="true" @toggle-collapse="onToggleCollapse" :hideToggle="true" @item-click="onItemClick">
@@ -170,10 +170,6 @@
     background-color: #000;
     opacity: 0.5;
     z-index: 900;
-  }
-
-  .demo {
-    padding: 50px;
   }
 
   pre {

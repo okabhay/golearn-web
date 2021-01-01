@@ -19,14 +19,14 @@
                     </div>
                 </div>
             </a>
-            <a href="#" class="flex items-center px-4 py-2 border-b border-black hover:bg-red-500">
+            <nuxt-link to="/admin/profile" class="flex items-center px-4 py-2 border-b border-black hover:bg-red-500">
                 <i class="fas fa-user-circle text-lg mr-4"></i>
                 <p>MY PROFILE</p>
-            </a>
-            <a href="#" class="flex items-center px-4 py-2 border-b border-black hover:bg-red-500">
+            </nuxt-link>
+            <nuxt-link to="/admin/settings" class="flex items-center px-4 py-2 border-b border-black hover:bg-red-500">
                 <i class="fas fa-cog text-lg mr-4"></i>
                 <p>SETTINGS</p>
-            </a>
+            </nuxt-link>
             <a href="#" class="flex items-center px-4 py-2 hover:bg-red-500">
                 <i class="fas fa-sign-out-alt text-lg mr-4"></i>
                 <p>LOG OUT</p>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav style="height: 58px;" aria-label="top bar" class="flex-none flex justify-between bg-white">
+    <nav style="height: 58px;" aria-label="top bar" class="flex-none flex justify-between border-b bg-white">
       <!-- top bar left -->
       <ul aria-label="top bar left" aria-orientation="horizontal" class="flex">
         <!-- add button -->
@@ -169,7 +169,7 @@
     </nav>
 
     <!-- section body header -->
-    <header aria-label="page caption" class="flex-none flex h-16 bg-gray-100 border-t px-4 items-center">
+    <header aria-label="page caption" class="flex-none flex h-16 bg-gray-100 border-b px-4 items-center">
       <h1 id="page-caption" class="font-semibold text-lg">Dashboard</h1>
     </header>
   </div>
