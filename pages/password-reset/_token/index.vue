@@ -15,7 +15,7 @@
                   </svg>
                 </span>
               </div>
-              <input id="password" type="password" name="password" class="base-input w-full pl-10" placeholder="New password" />
+              <t-input id="password" type="password" name="password" class="w-full pl-10" placeholder="New password" />
             </div>
             <div class="relative">
               <div class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
@@ -27,7 +27,7 @@
                   </svg>
                 </span>
               </div>
-              <input id="password" type="password" name="password" class="base-input w-full pl-10" placeholder="Confirm new password" />
+              <t-input id="password" type="password" name="password" class="w-full pl-10" placeholder="Confirm new password" />
             </div>
           </div>
 

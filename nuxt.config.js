@@ -20,6 +20,8 @@ export default {
     }
   },
 
+  plugins: ['~/plugins/vue-tailwind.js'],
+
   components: {
     dirs: [
       '~/components',

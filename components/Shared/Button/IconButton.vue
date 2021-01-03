@@ -1,5 +1,5 @@
 <template>
-  <button class="w-11 h-11 rounded overflow-hidden ripple focus:outline-none" :class="outline? `border-2 border-${this.color} hover:border-0 hover:bg-${this.color} text-${this.color} hover:text-white` : `bg-${color}`" @click="handleClick">
+  <button class="w-12 h-12 rounded overflow-hidden ripple focus:outline-none" :class="outline? `border-2 border-${this.color} hover:border-0 hover:bg-${this.color} text-${this.color} hover:text-white` : `bg-${color}`" @click="handleClick">
     <slot name="icon" />
   </button>
 </template>

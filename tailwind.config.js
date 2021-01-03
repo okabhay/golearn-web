@@ -20,9 +20,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
+          '"Segoe UI"',
           'Roboto',
           '"Inter"',
-          '"Segoe UI"',
         ],
       }
     },
