@@ -1,74 +1,68 @@
 <template>
-    <div class="flex flex-wrap bg-gray-100 h-screen">
-    <div class="w-80 bg-white border">
-        <ul class="text-sm">
-            <li>
-                <a href="#" class="flex items-center p-3 border-b text-gray-700 font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline">
-                    <span class="text-gray-600 pr-4">
-                        <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                    </span>
-                    <span>My profile</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-3 border-b text-gray-700 font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline">
-                    <span class="text-gray-600 pr-4">
-                        <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
-                        </svg>
-                    </span>
-                    <span>Notifications</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-3 border-b text-gray-700 font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline">
-                    <span class="text-gray-600 pr-4">
-                        <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
-                        </svg>
-                    </span>
-                    <span>Settings</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-3 border-b text-gray-700 font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline">
-                    <span class="text-gray-600 pr-4">
-                        <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                        </svg>
-                    </span>
-                    <span>Change password</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-3 border-b text-gray-700 font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline">
-                    <span class="text-gray-600 pr-4">
-                        <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                        </svg>
-                    </span>
-                    <span>Logout</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="w-9/12">
-        <div class="p-4 text-gray-500 bg-white">
-            Content here...
+  <div class=" pb-8">
+    <div class="mx-auto lg:w-2/4 px-12 py-1">
+      <div class="bg-white border p-12 w-full justify-center items-center overflow-hidden rounded shadow-sm mx-auto mb-6">
+        <div class="shadow mx-auto h-24 w-24 border-white rounded-full overflow-hidden border-4">
+          <img class="object-cover w-full h-full"
+            src="https://www.kindpng.com/picc/m/41-415494_profile-picture-in-circle-hd-png-download.png">
         </div>
+        <div class="flex flex-col justify-center items-center mt-6">
+          <h1 class="text-xl text-center font-semibold">
+            Radhika Singh
+          </h1>
+          <p class="text-sm text-gray-600 bg-gray-200 text-center border rounded-full py-1 px-4 my-2 inline">
+            radhika.shing@gmail.com
+          </p>
+        </div>
+        <div class="flex justify-center my-6 space-x-3">
+          <button
+            class="inline-block p-3 text-center text-white transition bg-blue-700 rounded-full shadow ripple hover:shadow-lg hover:bg-blue-800 focus:outline-none">
+            <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <button
+            class="inline-block p-3 text-center text-white transition bg-red-500 rounded-full shadow ripple hover:shadow-lg hover:bg-red-600 focus:outline-none">
+            <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <button
+            class="inline-block p-3 text-center text-white transition border border-yellow-500 rounded-full ripple hover:bg-yellow-100 focus:outline-none">
+            <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </button>
+        </div>
+        <div class="my-6">
+          <h3 class="mx-6 text-xl text-center font-semibold">About Us</h3>
+          <div class="mt-6 pt-3 mx-6 border-t text-center">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In placeat eligendi autem. Sunt modi soluta
+              nostrum, saepe, quia beatae harum rem reprehenderit deserunt qui praesentium dolor aspernatur aliquam hic
+              fuga.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In placeat eligendi autem. Sunt modi soluta
+              nostrum, saepe, quia beatae harum rem reprehenderit deserunt qui praesentium dolor aspernatur aliquam hic
+              fuga.</p>
+          </div>
+        </div>
+      </div>
+      <!-- component -->
+      <Security />
+      <SocialContacts class="my-6" />
+      <NotificationSettings />
     </div>
-</div>
+  </div>
 </template>
 
 <script>
-export default {
+  export default {
 
-}
+  }
+
 </script>
-
-<style>
-
-</style>

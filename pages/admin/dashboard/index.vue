@@ -1,7 +1,6 @@
 <template>
-  <div>
-      Hello From Dashboard Page
-      <t-textarea></t-textarea>
+  <div class="container mx-auto p-24">
+      <SocialContacts />
   </div>
 </template>
 

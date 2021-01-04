@@ -30,6 +30,9 @@ export default {
         },
         {
           path: '~/components/Shared/Button/'
+        },
+        {
+          path: '~/components/Profile/'
         }
     ]
   },
