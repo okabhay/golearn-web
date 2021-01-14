@@ -146,6 +146,7 @@
   html {
     margin: 0;
     padding: 0;
+    background-color: #E5E7EB;
   }
 
   #demo {

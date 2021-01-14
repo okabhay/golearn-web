@@ -20,7 +20,13 @@ export default {
     }
   },
 
-  plugins: ['~/plugins/vue-tailwind.js'],
+  plugins: [
+    '~/plugins/vue-tailwind.js',
+    '~/plugins/vue-dialog.client.js',
+    '~/plugins/ag-grid.client.js',
+    '~/plugins/draggable.client.js',
+    '~/plugins/click-outside.client.js',
+  ],
 
   components: {
     dirs: [

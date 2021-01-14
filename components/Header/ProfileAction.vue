@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-click-outside="closeDropdown">
     <button title="Page Menu" @click="isOpen = !isOpen" class="h-full w-full rounded-full border focus:outline-none focus:shadow-outline">
         <img class="h-full w-full rounded-full mx-auto" src="https://raw.githubusercontent.com/bluebrown/tailwind-zendesk-clone/master/public/assets/me.jpg" />
     </button>
@@ -43,5 +43,10 @@ export default {
             isOpen: false
         }
     },
+    methods:{
+		closeDropdown(){
+			this.isOpen = false;
+		}
+	}
 }
 </script>
