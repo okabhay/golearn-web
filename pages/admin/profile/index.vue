@@ -1,5 +1,16 @@
 <template>
-  <div class=" pb-8">
+  <div>
+    <div class="bg-white p-2 border-b border-gray-300 pr-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <t-button to="/admin/dashboard/" type="button" variant="secoundry" class="py-3 border-r focus:ring-0">
+          <span class="fas fa-arrow-left"> Go Back</span>
+        </t-button>
+        <h2 class="text-lg font-semibold ml-4">My Profile</h2>
+      </div>
+      <t-button type="button" variant="error" class="py-3 border-r focus:ring-0">
+        <span class="fas fa-trash"> Delete</span>
+      </t-button>
+    </div>
     <div class="mx-auto lg:w-2/4 px-12 py-1">
       <div class="bg-white border p-12 w-full justify-center items-center overflow-hidden rounded shadow-sm mx-auto mb-6">
         <div class="shadow mx-auto h-24 w-24 border-white rounded-full overflow-hidden border-4">
@@ -62,7 +73,7 @@
 
 <script>
   export default {
-
+    layout: 'main'
   }
 
 </script>
